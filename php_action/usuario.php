@@ -5,18 +5,25 @@ require_once 'db_connect.php';
 
 // CADASTRAR UM NOVO CLIENTE
  if(isset($_POST['btn-registrar'])):
-    $id = mysqli_escape_string($connect, $_POST['id_produto']);
+    $id = mysqli_escape_string($connect, $_POST['id_usuario']);
     $nome = mysqli_escape_string($connect, $_POST['nome']);
-    $cpf = mysqli_escape_string($connect, $_POST['cpf']);
-    $telefone = mysqli_escape_string($connect, $_POST['telefone']);
-    $endereco = mysqli_escape_string($connect, $_POST['endereco']);
+    $email = mysqli_escape_string($connect, $_POST['email']);
     $senha = mysqli_escape_string($connect, $_POST['senha']);
+    $tipo = mysqli_escape_string($connect, $_POST['tipo']);
+    $data_nascimento = mysqli_escape_string($connect, $_POST['data_nascimento']);
+    $sexo = mysqli_escape_string($connect, $_POST['sexo']);
+    $celular = mysqli_escape_string($connect, $_POST['celular']);
+    $CPF = mysqli_escape_string($connect, $_POST['CPF']);
+    $RG = mysqli_escape_string($connect, $_POST['RG']);
+    $serie = mysqli_escape_string($connect, $_POST['serie']);
+    $endereco = mysqli_escape_string($connect, $_POST['endereco']);
+    
     
 //comando sql para inserir dados
-$sql = "INSERT INTO cliente (nome_cliente, cpf_cliente, fone_cliente, endereco_cliente, senha_cliente) 
-        VALUES ('$nome', '$cpf', '$telefone', '$endereco', '$senha')";
+$sql = "INSERT INTO cliente (nome, email, senha, tipo, data_nascimento, sexo, celular, CPF, RG, serie, endereco) 
+        VALUES ('$nome', '$email', '$senha', '$tipo', '$data_nascimento','$sexo', '$celular','$CPF', '$RG','$serie', '$endereco')";
 
-$id = "SELECT id_cliente FROM cliente WHERE id_cliente= '$id'";
+$id = "SELECT id_usuario FROM usuarios WHERE id_usuario= '$id'";
 
 
         if(mysqli_query($connect, $sql))://
