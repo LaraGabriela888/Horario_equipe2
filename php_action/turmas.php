@@ -9,10 +9,10 @@ require_once 'db_connect.php';
     $nome = mysqli_escape_string($connect, $_POST['nome']);
     
 //comando sql para inserir dados
-$sql = "INSERT INTO horarios (nome) 
+$sql = "INSERT INTO turmas (nome) 
         VALUES ('$nome')";
 
-$id = "SELECT id_horario FROM horarios WHERE id_horario= '$id'";
+$id = "SELECT id_turma FROM turmas WHERE id_turma= '$id'";
 
 
         if(mysqli_query($connect, $sql))://
