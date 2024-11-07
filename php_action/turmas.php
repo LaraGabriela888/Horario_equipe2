@@ -3,7 +3,7 @@
 session_start();// sessão SEMPRE em primeiro
 require_once 'db_connect.php';
 
-// CADASTRAR UM NOVO HORARIO
+// CADASTRAR UMA NOVA TURMA
  if(isset($_POST['btn-registrar'])):
     $id = mysqli_escape_string($connect, $_POST['id_turma']);
     $nome = mysqli_escape_string($connect, $_POST['nome']);
