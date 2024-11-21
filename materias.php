@@ -11,7 +11,7 @@ require_once 'includes/header.php';
         <div class="col s12 m6 push-m3 brown">
             <thead>
                 <tr>
-                    <th>Nome da Materia:</th>
+                    <th>Nome da Matéria:</th>
                 </tr>
             </thead>
     
