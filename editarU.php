@@ -16,7 +16,7 @@ if(isset($_GET['id_usuario'])){
 <!-- EDITAR INFORMAÇÕES DO USUARIO-->
 <div class="row">
     <div class="col s12 m6 push-m3 ">
-        <h3 class="light"> Editar usuário </h3>
+        <h3 class="light"> Editar Usuário </h3>
         <form action="php_action/updateU.php" method="POST">
             <input type="hidden" name="id"  value="<?php echo $dados['id_usuario']; ?>"><!-- nao permite mudar o id-->
             <div class="input-field col s12">
