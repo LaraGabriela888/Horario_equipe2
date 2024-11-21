@@ -8,7 +8,7 @@
     
 <div class="input-item">
 <label for="id_turma"><i class="bi bi-person"></i>Turma</label>
-<select id="id_turma" name="id_turma" require>
+<select id="id_turma" name="id_turma" required>
     <option value=""> Selecione uma turma</option>
     <?php
      $sql ="SELECT * FROM turmas";
