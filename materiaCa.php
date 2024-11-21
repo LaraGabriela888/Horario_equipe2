@@ -3,11 +3,11 @@
 <div class="content-add">    
 <!-- CADASTRAR UMA NOVA MATERIA -->
 <div class="content">
-<h1>Cadastrar Materia</h1>
+<h1>Cadastrar Matéria</h1>
 <form action="php_action/materias.php" method="POST" class="content-form">
   
 <div class="input-item">
-<label for="nome"><i class="bi bi-person"></i>Nome da Materia</label>
+<label for="nome"><i class="bi bi-person"></i>Nome da Matéria</label>
 <input type="text" name="nome">
 </div>
 
