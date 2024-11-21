@@ -25,10 +25,10 @@ $sql = "UPDATE usuarios SET nome = '$nome', email = '$email', senha = '$senha', 
 
 if(mysqli_query($connect, $sql)){//
     $_SESSION['mensagem'] = "Atualizado com sucesso!";
-    header('Location: ../produtos.php?sucesso');//levar par index com sucesso
+    header('Location: ../usuarios.php?sucesso');//levar par index com sucesso
 } else{
     $_SESSION['mensagem'] = "Erro ao atualizar";  
-    header('Location: ../produtos.php?erro');//caso a conexão não funcione erro
+    header('Location: ../usuarios.php?erro');//caso a conexão não funcione erro
 }
 
 ?>
