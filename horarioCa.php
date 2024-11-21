@@ -19,7 +19,6 @@
      $conn->close();
      ?>
 </select>
-
 </div>
   
 <div class="input-item">
