@@ -21,10 +21,10 @@ $sql = "UPDATE horarios SET id_turma = '$id_turma', id_materia = '$id_materia', 
 
 if(mysqli_query($connect, $sql)){//
     $_SESSION['mensagem'] = "Atualizado com sucesso!";
-    header('Location: ../produtos.php?sucesso');//levar par index com sucesso
+    header('Location: ../horarios.php?sucesso');//levar par index com sucesso
 } else{
     $_SESSION['mensagem'] = "Erro ao atualizar";  
-    header('Location: ../produtos.php?erro');//caso a conexão não funcione erro
+    header('Location: ../horarios.php?erro');//caso a conexão não funcione erro
 }
 
 ?>
