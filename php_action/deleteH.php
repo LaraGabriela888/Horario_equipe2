@@ -11,10 +11,10 @@ $sql = "DELETE FROM horarios WHERE id_horario = '$id'";
 
 if(mysqli_query($connect, $sql))://
     $_SESSION['mensagem'] = "Deletado com sucesso!";
-    header('Location: ../produtos.php?sucesso');//levar par index com sucesso
+    header('Location: ../horarios.php?sucesso');//levar par index com sucesso
 else:
     $_SESSION['mensagem'] = "Erro ao deletar";  
-    header('Location: ../produtos.php?erro');//caso a conexão não funcione erro
+    header('Location: ../horarios.php?erro');//caso a conexão não funcione erro
 endif;
 endif;
 
