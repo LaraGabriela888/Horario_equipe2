@@ -8,17 +8,7 @@
     
 <div class="input-item">
 <label for="id_turma"><i class="bi bi-person"></i>Turma</label>
-<select id="id_turma" name="id_turma" required>
-    <option value=""> Selecione uma turma</option>
-    <?php
-    $conn = new mysqli('localhost','root','','escola_horarios');
-    $result = $conn->query("SELECT * FROM turmas");
-    while($row = $result->fetch_assoc()) {
-        echo "<option value= '{$row['id_turma']}'>{$row['nome']} </option>";
-     }
-     $conn->close();
-     ?>
-</select>
+<input type="text" name="id_turma">
 </div>
   
 <div class="input-item">
