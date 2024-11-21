@@ -4,7 +4,7 @@
 <!-- CADASTRAR UM NOVO HORARIO -->
 <div class="content">
 <h1>Cadastrar Horário</h1>
-<form action="php_action/usuario.php" method="POST" class="content-form">
+<form action="php_action/horario.php" method="POST" class="content-form">
     
 <div class="input-item">
 <label for="id_turma"><i class="bi bi-person"></i>Turma</label>
@@ -41,7 +41,7 @@
 <input type="text" name="hora_fim">
 </div>
 
-<button type="submit" name="btn-registrar" class="btn-registrar">Registrar</button>
+<button type="submit" name="btn-registrar" class="btn-registrar">Cadastrar</button>
 </form>
 </div>
 </div>
