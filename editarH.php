@@ -49,7 +49,7 @@ if(isset($_GET['id_horario'])){
             </div>
           
             <button type="submit" name="btn-editar" class="btn">Editar</button> <!--SÓ PODE TER UM SUBMIT O RESTO TER QUE SER LINK-->
-            <a href="horario.php" type="submit" class="btn green">Lista de Horários</a>
+            <a href="horarios.php" type="submit" class="btn green">Lista de Horários</a>
         </form>
     </div>
 </div>
