@@ -20,7 +20,7 @@ require_once 'db_connect.php';
     
     
 //comando sql para inserir dados
-$sql = "INSERT INTO cliente (nome, email, senha, tipo, data_nascimento, sexo, celular, CPF, RG, serie, endereco) 
+$sql = "INSERT INTO usuarios (nome, email, senha, tipo, data_nascimento, sexo, celular, CPF, RG, serie, endereco) 
         VALUES ('$nome', '$email', '$senha', '$tipo', '$data_nascimento','$sexo', '$celular','$CPF', '$RG','$serie', '$endereco')";
 
 $id = "SELECT id_usuario FROM usuarios WHERE id_usuario= '$id'";
