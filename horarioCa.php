@@ -11,12 +11,12 @@
 <select id="id_turma" name="id_turma" required>
     <option value=""> Selecione uma turma</option>
     <?php
-     $sql ="SELECT * FROM turmas";
-     $resultado = mysqli_query($connect, $sql);
-     while($dados = mysqli_fetch_array($resultado)): {
-        echo "<option value= '{$dados['id']}'>{$dados['nome']} </option>";
+    $conn = new mysqli('localhost','root','','escola_horarios');
+    $result = $conn->query("SELECT * FROM turmas");
+    while($row = $result->fetch_assoc()) {
+        echo "<option value= '{$row['id_turma']}'>{$row['nome']} </option>";
      }
-     $resultado->close();
+     $conn->close();
      ?>
 </select>
 
