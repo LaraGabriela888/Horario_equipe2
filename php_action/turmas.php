@@ -17,7 +17,7 @@ $id = "SELECT id_turma FROM turmas WHERE id_turma= '$id'";
 
         if(mysqli_query($connect, $sql))://
             $_SESSION['mensagem'] = "Cadastrado com sucesso! Seu id é ".$id;
-            header('Location: ../index.php?sucesso');//levar par index com sucesso
+            header('Location: ../turmas.php?sucesso');//levar par index com sucesso
         else:
             $_SESSION['mensagem'] = "Erro ao cadastrar";  
             header('Location: ../index.php?erro');//caso a conexão não funcione erro
