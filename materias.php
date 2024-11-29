@@ -5,45 +5,76 @@ require_once 'php_action/db_connect.php';
 require_once 'includes/header.php';
 ?>
 
-    <!-- MOSTRAR AS MATERIAS -->
-    <div class="row">
-        <div class="col s12 m6 push-m3 brown">
-            <thead>
-                <tr>
-                    <th>Nome da Matéria:</th>
-                </tr>
-            </thead>
-    
-            <tbody>
-                <?php
-                $sql ="SELECT * FROM materias";//ordem decrescente
-                $resultado = mysqli_query($connect, $sql);
-                while($dados = mysqli_fetch_array($resultado)):
-                ?>
-                <tr>
-                    <td><?php echo $dados['nome']; ?></td>
-                    <td><a href="editarM.php?id_materia=<?php echo $dados['id_materia']; ?>" class="btn-floating blue"><i class="material-icons">edit</a></td>
-                    <td><a href="#modal <?php echo $dados['id_materia']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</a></td>
-                    
-                    <div id="modal <?php echo $dados['id_materia']; ?>" class="modal">
-                    <div class="modal-content">
-                     <h4>OPA!</h4>
-                     <p>Tem certeza que quer excluir isso?</p>
-                    </div>
+<!-- MOSTRAR AS MATÉRIAS -->
+<div class="row">
+    <div class="col s12 m6 push-m3 brown">
+        <h4>Lista de Matérias</h4>
+        <?php
+        $sql = "SELECT * FROM materias"; // ordem decrescente
+        $resultado = mysqli_query($connect, $sql);
+        while ($dados = mysqli_fetch_array($resultado)):
+        ?>
+            <div class="materia-item">
+                <p><strong>Nome da Matéria:</strong> <?php echo $dados['nome']; ?></p>
+                <div class="actions">
+                    <a href="editarM.php?id_materia=<?php echo $dados['id_materia']; ?>" class="btn-floating blue">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a href="#modal-<?php echo $dados['id_materia']; ?>" class="btn-floating red modal-trigger">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </div>
+            </div>
 
-                    <div class="modal-footer">
-                     <form action="php_action/deleteM.php" method="POST">
-                     <input type="hidden" name="id_materia" value="<?php echo $dados['id_materia'];?>">
-                     <button type="submit" name="btn-deletar" class="btn red">Sim, quero deletar</button>
-                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-                     </form>
+            <!-- Modal -->
+            <div id="modal-<?php echo $dados['id_materia']; ?>" class="modal">
+                <div class="modal-content">
+                    <h4>OPA!</h4>
+                    <p>Tem certeza que quer excluir isso?</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="php_action/deleteM.php" method="POST">
+                        <input type="hidden" name="id_materia" value="<?php echo $dados['id_materia']; ?>">
+                        <button type="submit" name="btn-deletar" class="btn red">Sim, quero deletar</button>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
+</div>
 
-                    </div>
-                    </div>
-                    
-                </tr>
-                <?php endwhile;?>
-            </tbody>
-        </table>
+<?php require_once 'includes/footer.php'; ?>
 
-<?php require_once 'includes/footer.php' ?>
+<script>
+    // Abrir o modal
+    document.querySelectorAll('.modal-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            const modalId = this.getAttribute('href').replace('#', '');
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+            const overlay = document.createElement('div');
+            overlay.classList.add('modal-overlay');
+            document.body.appendChild(overlay);
+
+            // Fechar modal ao clicar no overlay
+            overlay.addEventListener('click', () => closeModal(modal, overlay));
+        });
+    });
+
+    // Fechar o modal
+    document.querySelectorAll('.modal-close').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const modal = this.closest('.modal');
+            const overlay = document.querySelector('.modal-overlay');
+            closeModal(modal, overlay);
+        });
+    });
+
+    function closeModal(modal, overlay) {
+        modal.classList.remove('active');
+        if (overlay) overlay.remove();
+    }
+</script>
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/apr.css">
     <title>Document</title>
+    <script src="../js/modal.js"></script>
 </head>
 <body>
  
