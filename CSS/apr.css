@@ -1,349 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
 
-*{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    height: 100vh;
-    background-color: red;
-}
-html{
-    scroll-behavior: smooth;
-}
-.home{
-    width: 100%;
-    padding: 40px 0 40px 15%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    background-color: rgb(230, 230, 230);
-    gap: 60px;
 }
 
-.home img{
-    width: 80%;
-}
-
-.home h1{
-    font-weight: 400;
-    font-size: 3rem;
-}
-.home h2{
-    font-size: 2rem;
-}
-
-#menu{
-    width: 90px;
-    height: 100%;
-    background-color: rgb(51, 77, 133);
-    padding: 30px 0 10px 30px;
-    position: fixed;
-    overflow: hidden;
-    transition: .4s ease-out;
-    white-space:nowrap;
-    z-index: 6;
-}
-
-#btn-expandir{
-    width: 100%;
-}
-#btn-expandir i{
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-ul{
-    height: 100%;
-    list-style: none;
-    flex-wrap: none;
-}
-
-ul li.item-menu a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 20px 4%;
-    display: flex;
-    line-height: 40px;
-}
-
-ul li.item-menu a .text-link{
-    margin-left: 30px;
-}
-
-ul li.item-menu a .icon i{
-    font-size: 30px;
-}
-
-ul li:hover a{
-    color: rgb(44, 173, 32);
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 30px;
-}
-
-li{
-    display: flex;
-}
-a:hover{
-    cursor: pointer;
-}
-
-.fruta-title{
-    display: flex;
-    width: 100%;
-    padding: 0 10px 10px ;
-    justify-content: center;
-}
-
-.item-frutas{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, 300px);
-    justify-content: center;
-}
-
-.card{
-    width: 260px;
-    height: 380px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 4px 4px 23px #aaaa;
-}
-
-.card img{
-    width: 100%;
-    height: 160px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.card div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    height: 50%;
-}
-
-.card h1{
-    font-size: 1rem;
-}
-
-.card h2{
-    margin: 0;
-    font-size: 1rem;
-    color: #aaaa;
-}
-
-.card button{
-    background-color: rgb(63, 72, 124);
-    height: 60px;
-    border: none;
-    padding: 4px;
-    width: 80%;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.card button:hover{
-    cursor: pointer;
-background-color: rgb(28, 35, 75);
-}
-
-.produtos{
-    margin-left: 50px;
-& h1{
-    font-size: 2rem;
-}
-}
-
-.produtos-scroll{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    gap: 30px;
-}
-
-.btn-scroll{
-    padding: 20px 40px 20px 40px;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    background-color: rgb(40, 197, 40);
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: white;
-}
-
-.btn-scroll:hover{
-    background-color: rgb(40, 157, 40);
-    cursor: pointer;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
+.row {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 90%;
+    background-color: #fff;
     border-radius: 5px;
-    padding: 30px 10px 30px 10px;
-    height: auto;
-    gap: 10px;
-    & h1{
-        font-size: 2rem;
-        padding: 0;
-        margin:0;
-    }
-    & h2{
-        font-size: 30px;
-    }
-    & h3{
-        font-size: 1.5rem;
-    }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.body-add{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bloco-adicionar{
-    padding: 20px;
-    background-color: rgb(185, 185, 185);
-}
-
-.input-item{
+table {
     width: 100%;
-    font-size: 1px;
-}
-.input-item input{
-    font-size: 1rem;
-    height: 45px;
-    width: 100%;
-    border: 2px rgb(206, 206, 206) solid;
-    border-radius: 4px;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-.content .input-item label i{
-    transform: translateX(90px);
-    transform: translateY(190px);
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
 }
 
-#register-body{
-    background-image: linear-gradient(45deg,rgb(19, 59, 122),rgb(71, 143, 252));
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin:0;
-    align-items: center;
-}
-
-table{
-    background-color: white;
-}
-td{
-    background-color: white;
-}
-tr{
-    background-color: white;
-}
-
-.btn-registrar{
-    background-color: rgb(63, 72, 124);
-    height: 55px;
-    border: none;
-    width: 100%;
+th {
+    background-color: #brown;
     color: white;
-    font-size: 1.1rem;
     font-weight: bold;
-    border-radius: 4px;
-}
-.btn-registrar:hover{
-    background-color: rgb(36, 44, 88);
-    cursor: pointer;
-}
-.btn-cadastrar{
-    background-color: rgb(61, 82, 201);
-    height: 55px;
-    border: none;
-    width: 100%;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 4px;
-}
-.btn-cadastrar:hover{
-    background-color: rgb(28, 50, 175);
-    cursor: pointer;
-}
-.btn-blue{
-    background-color: rgb(61, 82, 201);
-    &:hover{
-        background-color: rgb(28, 50, 175);
-        transition: none;
-    }
 }
 
-.row-compras{
-    padding: 20px;
-    background-color: gray;
-}
-.btn-comprar{
-    background-color: rgb(61, 82, 201);
-    height: 55px;
-    border: none;
-    width: 100%;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    &:hover{
-        background-color: rgb(28, 50, 175);
-        transition: none;
-    }
+td {
+    background-color: #f9f9f9;
 }
 
-#miss-password{
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-floating {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
     text-decoration: none;
-    color: rgb(66, 87, 206);
+    cursor: pointer;
 }
 
-#subtitle-login{
-    font-size: 1.1rem;
+.btn-floating.blue {
+    background-color: #2196F3;
 }
 
-form .content{
-    padding: 0;
+.btn-floating.red {
+    background-color: #F44336;
 }
 
-.content-add{
-    background-image: linear-gradient(45deg,rgb(19, 59, 122),rgb(71, 143, 252));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.btn-floating i {
+    font-size: 16px;
+    line-height: inherit;
 }
 
-.register-body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: start;
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal-content h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+.modal-footer .btn {
+    margin-left: 10px;
+}
+
+
+.modal-trigger {
+    position: relative;
+}
+
+.modal-close {
+    cursor: pointer;
 }
