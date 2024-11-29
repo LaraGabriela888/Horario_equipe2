@@ -1,7 +1,6 @@
 <?php 
-include_once 'includes/mensagem.php';
 require_once 'php_action/db_connect.php';
-require 'includes/header.php';
+require_once 'includes/header.php';
 ?>
 
     <!-- MOSTRAR OS USUARIOS -->
