@@ -17,7 +17,7 @@ include 'php_action/db_connect.php'; // Usando a conexão do db_connect.php
                     // Usando a conexão criada no db_connect.php
                     $result = $connect->query("SELECT * FROM turmas");
                     while ($row = $result->fetch_assoc()) {
-                        echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                        echo "<option value='{$row['id_turma']}'>{$row['nome']}</option>";
                     }
                     ?>
                 </select>
@@ -31,7 +31,7 @@ include 'php_action/db_connect.php'; // Usando a conexão do db_connect.php
                     // Usando a conexão criada no db_connect.php
                     $result = $connect->query("SELECT * FROM materias");
                     while ($row = $result->fetch_assoc()) {
-                        echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                        echo "<option value='{$row['id_materia']}'>{$row['nome']}</option>";
                     }
                     ?>
                 </select>
@@ -45,7 +45,7 @@ include 'php_action/db_connect.php'; // Usando a conexão do db_connect.php
                     // Usando a conexão criada no db_connect.php
                     $result = $connect->query("SELECT * FROM usuarios WHERE tipo = 'professor'");
                     while ($row = $result->fetch_assoc()) {
-                        echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                        echo "<option value='{$row['id_usuario']}'>{$row['nome']}</option>";
                     }
                     ?>
                 </select>
