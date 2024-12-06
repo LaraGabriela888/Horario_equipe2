@@ -18,7 +18,17 @@
 
 <div class="input-item">
 <label for="id_professor"><i class="bi bi-person"></i>Professor</label>
-<input type="text" name="id_professor">
+<select id="id_usuario" name="id_usuario" required>
+    <option value="">Selecione um Professor</option>
+    <?php
+    $conn = new mysqli('localhost', 'root','','escola_horarios');
+    $result = $conn->query("SELECT * FROM usuarios WHERE tipo = professor");
+    while ($row = $result->fetch_assoc()){
+        echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+    }
+    $conn->close();
+    ?>
+    </select>
 </div>
 
 <div class="input-item">
