@@ -263,3 +263,50 @@ body {
 .box:active {
     background-color: #003f7f;
 }
+
+.select-container {
+    width: 100%;
+    max-width: 400px;  
+    margin: 10px auto; 
+}
+
+select {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    font-size: 16px; 
+    color: #333; 
+    cursor: pointer; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+}
+
+select::-ms-expand {
+    display: none; 
+}
+
+select:focus {
+    border-color: #0056b3; 
+    outline: none; 
+}
+
+label {
+    font-size: 14px; 
+    color: #333; 
+    margin-bottom: 5px; 
+    display: block; 
+}
+
+option {
+    padding: 10px; 
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+option:checked {
+    background-color: #0056b3; 
+    color: white; 
+}
